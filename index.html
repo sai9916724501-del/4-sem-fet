@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Technologies | Dark Trio</title>
+    <style>
+        /* CSS: THE "SUIT" - UPDATED FOR DARK MODE */
+        :root {
+            --primary: #60a5fa; /* Brighter blue for dark background */
+            --secondary: #a78bfa;
+            --bg-body: #0f172a; /* Deep Midnight Black */
+            --bg-card: #1e293b; /* Slightly lighter navy for cards */
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --glass: rgba(15, 23, 42, 0.8);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* --- Creative Glassmorphism Navbar (Dark) --- */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 8%;
+            background: var(--glass);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--text-main);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .logo span { color: var(--primary); }
+
+        .auth-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 10px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s all ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-login {
+            background: transparent;
+            color: var(--text-main);
+            border: 2px solid rgba(255,255,255,0.2);
+        }
+
+        .btn-login:hover {
+            background: white;
+            color: var(--bg-body);
+            border-color: white;
+        }
+
+        .btn-signup {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            box-shadow: 0 4px 15px rgba(96, 165, 250, 0.3);
+        }
+
+        .btn-signup:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(96, 165, 250, 0.5);
+        }
+
+        /* --- Content Sections --- */
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #ffffff, var(--primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            color: var(--text-muted);
+        }
+
+        .main-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 0 20px 60px;
+        }
+
+        /* The Core Image */
+        .tech-visual {
+            width: 100%;
+            max-width: 800px;
+            border-radius: 20px;
+            /* Added a subtle glow instead of a dark shadow */
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 20px rgba(96, 165, 250, 0.1);
+            margin-bottom: 50px;
+            transition: transform 0.5s ease;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .tech-visual:hover {
+            transform: translateY(-5px) scale(1.01);
+        }
+
+        /* Tech Description Cards (Dark Mode) */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--bg-card);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: 0.3s;
+            text-align: left;
+        }
+
+        .card:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+            background: #243147;
+        }
+
+        .card h2 {
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .card p {
+            color: var(--text-muted);
+        }
+
+        .card strong {
+            color: white;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Front<span>End</span></div>
+        <div class="auth-buttons">
+            <button class="btn btn-login" onclick="alert('Login Clicked!')">Login</button>
+            <button class="btn btn-signup" onclick="alert('Signup Clicked!')">Sign Up</button>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>Frontend Technologies</h1>
+        <p>Building the web, one layer at a time.</p>
+    </header>
+
+    <main class="main-container">
+        <img src="fed.jpg" alt="HTML CSS JS Visual" class="tech-visual">
+
+        <section class="grid">
+            <div class="card">
+                <h2>HTML</h2>
+                <p><strong>The Skeleton:</strong> The structural foundation of the web. It defines every heading, paragraph, and image.</p>
+            </div>
+            <div class="card">
+                <h2>HTML + CSS</h2>
+                <p><strong>The Suit:</strong> Adding style, color, and positioning. It turns a bare skeleton into a professional presentation.</p>
+            </div>
+            <div class="card">
+                <h2>HTML + CSS + JS</h2>
+                <p><strong>The Dance:</strong> Introducing movement and interactivity. JavaScript makes the page respond to the user.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2024 Frontend Tech Hub. All rights reserved.
+    </footer>
+
+    <script>
+        /* JS: THE "DANCE" - INTERACTIVITY */
+        window.onscroll = function() {
+            const nav = document.querySelector('.navbar');
+            if (window.pageYOffset > 50) {
+                nav.style.padding = "0.7rem 8%";
+                nav.style.background = "rgba(15, 23, 42, 0.95)";
+                nav.style.boxShadow = "0 10px 30px rgba(0,0,0,0.4)";
+            } else {
+                nav.style.padding = "1rem 8%";
+                nav.style.background = "rgba(15, 23, 42, 0.8)";
+                nav.style.boxShadow = "none";
+            }
+        };
+    </script>
+
+</body>
+</html>
