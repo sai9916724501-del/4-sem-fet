@@ -1,1 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Technical Skill Matrix</title>
 
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            background:#020d2b;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            min-height:100vh;
+            color:white;
+        }
+
+        .container{
+            width:70%;
+            background:#07142f;
+            padding:40px;
+            border-radius:20px;
+            box-shadow:0 0 20px rgba(0,0,0,0.4);
+        }
+
+        h1{
+            color:#a78bfa;
+            font-size:55px;
+            margin-bottom:15px;
+        }
+
+        hr{
+            border:1px solid #2d3b5c;
+            margin-bottom:30px;
+        }
+
+        ol{
+            padding-left:40px;
+            font-size:22px;
+        }
+
+        .section-title{
+            font-weight:bold;
+            margin-bottom:20px;
+        }
+
+        .skill-box{
+            background:#00081f;
+            margin:20px 0 30px 20px;
+            padding:15px 20px;
+            border-left:6px solid #9f7aea;
+            border-radius:12px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            width:90%;
+        }
+
+        .skill-text{
+            font-size:22px;
+        }
+
+        .edit-btn{
+            background:#a78bfa;
+            border:none;
+            padding:10px 22px;
+            border-radius:10px;
+            font-size:18px;
+            cursor:pointer;
+            color:black;
+        }
+
+        .links{
+            text-align:center;
+            margin-top:40px;
+        }
+
+        .links a{
+            display:block;
+            color:#9f7aea;
+            text-decoration:none;
+            font-size:22px;
+            margin:35px 0;
+        }
+
+        .links a:hover{
+            text-decoration:underline;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Technical Skill Matrix</h1>
+
+        <hr>
+
+        <ol>
+
+            <li class="section-title">
+                Software Development
+
+                <div class="skill-box">
+                    <div class="skill-text">
+                        C (Systems Programming & Sockets)
+                    </div>
+
+                    <button class="edit-btn">Edit</button>
+                </div>
+
+                <div class="skill-box">
+                    <div class="skill-text">
+                        Java (Object-Oriented Development)
+                    </div>
+
+                    <button class="edit-btn">Edit</button>
+                </div>
+
+            </li>
+
+            <li class="section-title">
+                Database Systems
+
+                <div class="skill-box">
+                    <div class="skill-text">
+                        SQL (Relational Database Management)
+                    </div>
+
+                    <button class="edit-btn">Edit</button>
+                </div>
+
+            </li>
+
+        </ol>
+
+        <div class="links">
+            <a href="#">Home page</a>
+            <a href="#">View CSS Version</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
