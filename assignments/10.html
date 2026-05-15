@@ -1,1 +1,138 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pull down and List Box</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #141e30, #243b55);
+        }
+
+        .container {
+            width: 400px;
+            padding: 30px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        h1 {
+            color: #243b55;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            outline: none;
+            background: #f1f1f1;
+            font-size: 16px;
+        }
+
+        select:focus {
+            border: 2px solid #243b55;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #243b55, #141e30);
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+
+        p {
+            margin-top: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #143b55;
+        }
+
+        hr {
+            margin: 25px 0;
+        }
+
+        #homepage {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #a9a9bd;
+            border-radius: 20px;
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Javascript Menu Demo</h1>
+        
+        <h2>Select Course</h2>
+        <select id="course">
+            <option value="">-- select course --</option>
+            <option value="Java">Java</option>
+            <option value="Python">Python</option>
+            <option value="Javascript">Javascript</option>
+        </select>
+        <p id="courseResult"></p>
+
+        <hr>
+
+        <h2>Select Hobby</h2>
+        <select id="hobby" size="4">
+            <option value="Reading">Reading</option>
+            <option value="Gaming">Gaming</option>
+            <option value="Music">Music</option>
+            <option value="Travelling">Travelling</option>
+        </select>
+        <br>
+        <button onclick="showHobby()">Show Hobby</button>
+        <p id="hobbyResult"></p>
+
+        <a id="homepage" href="">Homepage</a>
+    </div>
+
+    <script>
+        
+        document.getElementById("course").addEventListener("change", function() {
+            document.getElementById("courseResult").innerHTML = "Selected Course: " + this.value;
+        });
+
+        
+        function showHobby() {
+            let hobby = document.getElementById("hobby").value;
+            document.getElementById("hobbyResult").innerHTML = "Selected Hobby: " + hobby;
+        }
+    </script>
+</body>
+</html>
