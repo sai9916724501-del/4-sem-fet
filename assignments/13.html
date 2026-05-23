@@ -1,1 +1,160 @@
 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weather City Portal</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#141e30,#243b55,#0f2027);
+    overflow:hidden;
+}
+
+/* Animated background circles */
+
+.circle{
+    position:absolute;
+    border-radius:50%;
+    background:rgba(255,255,255,0.08);
+    animation:float 6s infinite ease-in-out;
+}
+
+.circle:nth-child(1){
+    width:120px;
+    height:120px;
+    top:10%;
+    left:10%;
+}
+
+.circle:nth-child(2){
+    width:180px;
+    height:180px;
+    bottom:10%;
+    right:10%;
+    animation-duration:8s;
+}
+
+@keyframes float{
+    0%{transform:translateY(0px);}
+    50%{transform:translateY(-20px);}
+    100%{transform:translateY(0px);}
+}
+
+.container{
+    position:relative;
+    width:400px;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    background:rgba(255,255,255,0.1);
+    backdrop-filter:blur(10px);
+    box-shadow:0 0 30px rgba(0,0,0,0.5);
+    z-index:1;
+}
+
+h1{
+    color:white;
+    margin-bottom:10px;
+    font-size:34px;
+}
+
+p{
+    color:#ddd;
+    margin-bottom:30px;
+}
+
+.city-link{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    text-decoration:none;
+    background:rgba(255,255,255,0.15);
+    color:white;
+    padding:16px;
+    margin:15px 0;
+    border-radius:12px;
+    font-size:20px;
+    transition:0.3s;
+    border:1px solid rgba(255,255,255,0.2);
+}
+
+.city-link:hover{
+    transform:scale(1.06);
+    background:#00c6ff;
+    box-shadow:0 0 15px #00c6ff;
+}
+
+.footer{
+    margin-top:25px;
+    color:#bbb;
+    font-size:14px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="circle"></div>
+<div class="circle"></div>
+
+<div class="container">
+
+    <h1>🌦 Weather Portal</h1>
+
+    <p>Select a city to check live weather conditions</p>
+
+    <a class="city-link"
+    href="https://www.google.com/search?q=bangalore+weather"
+    target="_blank">
+    🌤 Bangalore
+    </a>
+
+    <a class="city-link"
+    href="https://www.google.com/search?q=delhi+weather"
+    target="_blank">
+    ☀ Delhi
+    </a>
+
+    <a class="city-link"
+    href="https://www.google.com/search?q=mumbai+weather"
+    target="_blank">
+    🌧 Mumbai
+    </a>
+
+    <a class="city-link"
+    href="https://www.google.com/search?q=chennai+weather"
+    target="_blank">
+    ⛅ Chennai
+    </a>
+
+    <a class="city-link"
+    href="https://www.google.com/search?q=hyderabad+weather"
+    target="_blank">
+    🌥 Hyderabad
+    </a>
+
+    <div class="footer">
+        Made with HTML + CSS
+    </div>
+
+</div>
+
+</body>
+</html>
