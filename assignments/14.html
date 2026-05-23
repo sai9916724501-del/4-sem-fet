@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IPL Teams & Players</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color:white;
+    padding:30px;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:15px;
+    color:#FFD700;
+    font-size:45px;
+}
+
+.subtitle{
+    text-align:center;
+    margin-bottom:40px;
+    color:#ddd;
+    font-size:18px;
+}
+
+.container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    gap:25px;
+}
+
+.team-card{
+    background:rgba(255,255,255,0.1);
+    border-radius:20px;
+    padding:25px;
+    backdrop-filter:blur(10px);
+    box-shadow:0 0 20px rgba(0,0,0,0.4);
+    transition:0.3s;
+}
+
+.team-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 20px #00c6ff;
+}
+
+.team-name{
+    text-align:center;
+    font-size:28px;
+    margin-bottom:20px;
+    color:#00E5FF;
+    font-weight:700;
+}
+
+.role{
+    margin-top:15px;
+}
+
+.role h3{
+    color:#FFD700;
+    margin-bottom:10px;
+    border-bottom:1px solid rgba(255,255,255,0.3);
+    padding-bottom:5px;
+}
+
+ul{
+    list-style:none;
+}
+
+ul li{
+    padding:5px 0;
+    color:#f1f1f1;
+}
+
+.footer{
+    text-align:center;
+    margin-top:40px;
+    color:#ccc;
+    font-size:14px;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>🏏 IPL Teams Portal</h1>
+
+<p class="subtitle">
+All IPL Teams with Batters, Bowlers & All-Rounders
+</p>
+
+<div class="container">
+
+<!-- CSK -->
+<div class="team-card">
+    <div class="team-name">Chennai Super Kings</div>
+
+    <div class="role">
+        <h3>🏏 Batters</h3>
+        <ul>
+            <li>Ruturaj Gaikwad</li>
+            <li>Devon Conway</li>
+            <li>Ajinkya Rahane</li>
+        </ul>
+    </div>
+
+    <div class="role">
+        <h3>🎯 Bowlers</h3>
+        <ul>
+            <li>Deepak Chahar</li>
+            <li>Maheesh Theekshana</li>
+            <li>Tushar Deshpande</li>
+        </ul>
+    </div>
+
+    <div class="role">
+        <h3>🔥 All Rounders</h3>
+        <ul>
+            <li>Ravindra Jadeja</li>
+            <li>Moeen Ali</li>
+            <li>Shivam Dube</li>
+        </ul>
+    </div>
+</div>
+
+<!-- MI -->
+<div class="team-card">
+    <div class="team-name">Mumbai Indians</div>
+
+    <div class="role">
+        <h3>🏏 Batters</h3>
+        <ul>
+            <li>Rohit Sharma</li>
+            <li>Suryakumar Yadav</li>
+            <li>Tilak Varma</li>
+        </ul>
+    </div>
+
+    <div class="role">
+        <h3>🎯 Bowlers</h3>
+        <ul>
+            <li>Jasprit Bumrah</li>
+            <li>Gerald Coetzee</li>
+            <li>Piyush Chawla</li>
+        </ul>
+    </div>
+
+    <div class="role">
+        <h3>🔥 All Rounders</h3>
+        <ul>
+            <li>Hardik Pandya</li>
+            <li>Tim David</li>
+            <li>Romario Shepherd</li>
+        </ul>
+    </div>
+</div>
+
+<!-- RCB -->
+<div class="team-card">
+    <div class="team-name">Royal Challengers Bengaluru</div>
+
+    <div class="role">
+        <h3>🏏 Batters</h3>
+        <ul>
+            <li>Virat Kohli</li>
+            <li>Faf du Plessis</li>
+            <li>Rajat Patidar</li>
+        </ul>
+    </div>
+
+    <div class="role">
+        <h3>🎯 Bowlers</h3>
+        <ul>
+            <li>Mohammed Siraj</li>
+            <li>Yash Dayal</li>
+            <li>Lockie Ferguson</li>
+        </ul>
+    </div>
+
+    <div class="role">
+        <h3>🔥 All Rounders</h3>
+        <ul>
+            <li>Glenn Maxwell</li>
+            <li>Cameron Green</li>
+            <li>Mahipal Lomror</li>
+        </ul>
+    </div>
+</div>
+
+<!-- KKR -->
+<div class="team-card">
+    <div class="team-name">Kolkata Knight Riders</div>
+
+    <div class="role">
+        <h3>🏏 Batters</h3>
+        <ul>
+            <li>Shreyas Iyer</li>
+            <li>Rinku Singh</li>
+            <li>Nitish Rana</li>
+        </ul>
+    </div>
+
+    <div class="role">
+        <h3>🎯 Bowlers</h3>
+        <ul>
+            <li>Mitchell Starc</li>
+            <li>Varun Chakravarthy</li>
+            <li>Harshit Rana</li>
+        </ul>
+    </div>
+
+    <div class="role">
+        <h3>🔥 All Rounders</h3>
+        <ul>
+            <li>Andre Russell</li>
+            <li>Sunil Narine</li>
+            <li>Venkatesh Iyer</li>
+        </ul>
+    </div>
+</div>
+
+<!-- SRH -->
+<div class="team-card">
+    <div class="team-name">Sunrisers Hyderabad</div>
+
+    <div class="role">
+        <h3>🏏 Batters</h3>
+        <ul>
+            <li>Travis Head</li>
+            <li>Rahul Tripathi</li>
+            <li>Abdul Samad</li>
+        </ul>
+    </div>
+
+    <div class="role">
+        <h3>🎯 Bowlers</h3>
+        <ul>
+            <li>Bhuvneshwar Kumar</li>
+            <li>T Natarajan</li>
+            <li>Mayank Markande</li>
+        </ul>
+    </div>
+
+    <div class="role">
+        <h3>🔥 All Rounders</h3>
+        <ul>
+            <li>Pat Cummins</li>
+            <li>Marco Jansen</li>
+            <li>Washington Sundar</li>
+        </ul>
+    </div>
+</div>
+
+<!-- RR -->
+<div class="team-card">
+    <div class="team-name">Rajasthan Royals</div>
+
+    <div class="role">
+        <h3>🏏 Batters</h3>
+        <ul>
+            <li>Yashasvi Jaiswal</li>
+            <li>Sanju Samson</li>
+            <li>Shimron Hetmyer</li>
+        </ul>
+    </div>
+
+    <div class="role">
+        <h3>🎯 Bowlers</h3>
+        <ul>
+            <li>Trent Boult</li>
+            <li>Yuzvendra Chahal</li>
+            <li>Avesh Khan</li>
+        </ul>
+    </div>
+
+    <div class="role">
+        <h3>🔥 All Rounders</h3>
+        <ul>
+            <li>Riyan Parag</li>
+            <li>Ravichandran Ashwin</li>
+            <li>Jason Holder</li>
+        </ul>
+    </div>
+</div>
+
+<!-- DC -->
+<div class="team-card">
+    <div class="team-name">Delhi Capitals</div>
+
+    <div class="role">
+        <h3>🏏 Batters</h3>
+        <ul>
+            <li>David Warner</li>
+            <li>Prithvi Shaw</li>
+            <li>Jake Fraser-McGurk</li>
+        </ul>
+    </div>
+
+    <div class="role">
+        <h3>🎯 Bowlers</h3>
+        <ul>
+            <li>Anrich Nortje</li>
+            <li>Kuldeep Yadav</li>
+            <li>Khaleel Ahmed</li>
+        </ul>
+    </div>
+
+    <div class="role">
+        <h3>🔥 All Rounders</h3>
+        <ul>
+            <li>Axar Patel</li>
+            <li>Mitchell Marsh</li>
+            <li>Lalit Yadav</li>
+        </ul>
+    </div>
+</div>
+
+<!-- PBKS -->
+<div class="team-card">
+    <div class="team-name">Punjab Kings</div>
+
+    <div class="role">
+        <h3>🏏 Batters</h3>
+        <ul>
+            <li>Shikhar Dhawan</li>
+            <li>Jonny Bairstow</li>
+            <li>Prabhsimran Singh</li>
+        </ul>
+    </div>
+
+    <div class="role">
+        <h3>🎯 Bowlers</h3>
+        <ul>
+            <li>Arshdeep Singh</li>
+            <li>Kagiso Rabada</li>
+            <li>Rahul Chahar</li>
+        </ul>
+    </div>
+
+    <div class="role">
+        <h3>🔥 All Rounders</h3>
+        <ul>
+            <li>Sam Curran</li>
+            <li>Liam Livingstone</li>
+            <li>Sikandar Raza</li>
+        </ul>
+    </div>
+</div>
+
+<!-- GT -->
+<div class="team-card">
+    <div class="team-name">Gujarat Titans</div>
+
+    <div class="role">
+        <h3>🏏 Batters</h3>
+        <ul>
+            <li>Shubman Gill</li>
+            <li>David Miller</li>
+            <li>Sai Sudharsan</li>
+        </ul>
+    </div>
+
+    <div class="role">
+        <h3>🎯 Bowlers</h3>
+        <ul>
+            <li>Mohit Sharma</li>
+            <li>Spencer Johnson</li>
+            <li>Rashid Khan</li>
+        </ul>
+    </div>
+
+    <div class="role">
+        <h3>🔥 All Rounders</h3>
+        <ul>
+            <li>Rahul Tewatia</li>
+            <li>Vijay Shankar</li>
+            <li>Azmatullah Omarzai</li>
+        </ul>
+    </div>
+</div>
+
+<!-- LSG -->
+<div class="team-card">
+    <div class="team-name">Lucknow Super Giants</div>
+
+    <div class="role">
+        <h3>🏏 Batters</h3>
+        <ul>
+            <li>KL Rahul</li>
+            <li>Quinton de Kock</li>
+            <li>Ayush Badoni</li>
+        </ul>
+    </div>
+
+    <div class="role">
+        <h3>🎯 Bowlers</h3>
+        <ul>
+            <li>Mark Wood</li>
+            <li>Mohsin Khan</li>
+            <li>Ravi Bishnoi</li>
+        </ul>
+    </div>
+
+    <div class="role">
+        <h3>🔥 All Rounders</h3>
+        <ul>
+            <li>Marcus Stoinis</li>
+            <li>Krunal Pandya</li>
+            <li>Nicholas Pooran</li>
+        </ul>
+    </div>
+</div>
+
+</div>
+
+<div class="footer">
+    Made with HTML & CSS 💙
+</div>
+
+</body>
+</html>
